@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js" defer async></script>
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">HMS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="homepage.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Surgeries.html">Surgeries</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">About</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit" id="nav-search">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <h5 class="text-center m-5 fs-3 active" id="select">Select Surgeon</h5>
+
+  <div  class="" id="main"> 
+    
+  </div>
+
+  <h5 class="text-center mt-5" id="avail"></h5>
+
+  <div id="sur" class="mt-4">
+    
+  </div>
+
+
+  <script src="js/addSurgery.js"></script>
+</body>
+</html>

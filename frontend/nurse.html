@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="nurse.css"> -->
+    <link  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">  
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">HMS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="homepage.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Surgeries.html">Surgeries</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="about.html">About</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-light" type="submit" id="nav-search">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <h5 class="text-center mt-4 " id="name">NURSES </h5>
+      <!-- Post -->
+    <div class="position-relative mx-5 mt-2">
+        <button type="button" class="btn btn-primary position-absolute end-0 t-0 " data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+            Add
+        </button>
+    </div>
+    <div class="px-5 pt-5">
+        <table class="table table-dark table-bordered text-center table-striped " id="nur">
+            <thead>
+                <tr id="details">
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>VIEW</th>
+                    <th>UPDATE</th>
+                    <th>DELETE</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+            </tbody>
+        </table>
+    </div>
+
+    
+  
+  <!-- Update -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 mx-auto" id="staticBackdropLabel">
+                        <div class="note">  
+                            <h1 id="ed"> Enter Details </h1>  
+                        </div>  
+                    </h1>
+                </div>
+                <div class="modal-body" id="update-modal">
+                    <div class="container register-form">  
+                        <div class="form-content">  
+                            <div class="form-floating mb-3">
+                                <input type="name" class="form-control" id="fn"  placeholder="First Name">
+                                <label  class="mx-3">First Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="name" class="form-control"  id="mn" placeholder="Middle Name">
+                                <label  class="mx-3">Middle Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="name" class="form-control"  id="ln" placeholder="Last Name">
+                                <label  class="mx-3">Last Name</label>
+                            </div>
+                                
+                            <div class="form-floating mb-3">  
+                                <input type="number" class="form-control px-3" placeholder="Nurse Id *" value="" id="id"/>  
+                                <label  class="mx-3">Nurse Id</label>
+                            </div>  
+                            <div class="form-floating mb-3">  
+                                <input type="date" class="form-control" placeholder="Date Of Joining " value="" id="date"/>  
+                                <label  class="mx-3">Date of Joining</label>
+                            </div>  
+                    
+                            <div class="form-floating mb-3">  
+                                <input type="number" class="form-control" placeholder="Salary " value="" id="salary"/>
+                                <label  class="mx-3">Salary</label>  
+                            </div>  
+
+                            <div class="form-floating mb-3">  
+                                <input type="email" class="form-control" placeholder=" Enter Email Address" id="email">  
+                                <label  class="mx-3">Email Address</label>
+                            </div>  
+                            <div class="form-floating mb-3">  
+                                <input type="text" class="form-control" placeholder=" Address" id="address">  
+                                <label  class="mx-3">Address</label>
+                            </div> 
+                        </div>                              
+                    </div>                 
+                </div>  
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="modal-cancel">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="modal-save">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- View -->
+    <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 mx-auto" id="staticBackdropLabel">
+                        <div class="note">  
+                            <h1 id="ed">Details </h1>  
+                        </div>  
+                    </h1>
+                </div>
+                <div class="modal-body" id="update-modal">
+                    <div class="container register-form">  
+                        <div class="form-content">  
+                            <!-- <div class="form-floating mb-3"> -->
+                                <!-- <input disabled type="name" class="form-control" id="fn1"  placeholder="First Name"> -->
+                            <div>
+                                <label  class="mx-3">First Name: </label>
+                                <span id="fn1"></span>
+                            </div>        
+                            <!-- </div> -->
+                            <!-- <div class="form-floating mb-3"> -->
+                                <!-- <input type="name" class="form-control"  id="mn1" placeholder="Middle Name"> -->
+                            <div>
+                                <label  class="mx-3">Middle Name: </label>
+                                <span id="mn1"></span>
+                            </div>
+                            <!-- </div> -->
+                            <div >
+                                <!-- <input type="name" class="form-control"  id="ln1" placeholder="Last Name"> -->
+                                <label  class="mx-3">Last Name: </label>
+                                <span id="ln1"></span>
+                            </div>
+                                
+                            <div >  
+                                <!-- <input type="number" class="form-control " placeholder="Nurse Id *" value="" id="id1"> -->
+                                <label  class="mx-3">Nurse Id: </label>
+                                <span id="id1"></span>
+                            </div>  
+                            <div >  
+                                <!-- <input type="date" class="form-control" placeholder="Date Of Joining " value="" id="date1"/>   -->
+                                <label  class="mx-3">Date of Joining: </label>
+                                <span id="date1"></span>
+                            </div>  
+                    
+                            <div >  
+                                <!-- <input type="number" class="form-control" placeholder="Salary " value="" id="salary1"/> -->
+                                <label  class="mx-3">Salary: </label>  
+                                <span id="salary1"></span>
+                            </div>  
+
+                            <div >  
+                                <!-- <input type="email" class="form-control" placeholder=" Enter Email Address" id="email1">   -->
+                                <label  class="mx-3">Email Address: </label>
+                                <span id="email1"></span>
+                            </div>  
+                            <div >  
+                                <!-- <input type="text" class="form-control" placeholder=" Address" id="address1">   -->
+                                <label  class="mx-3">Address: </label>
+                                <span id="address1"></span>
+                            </div> 
+                        </div>                              
+                    </div>                 
+                </div>  
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="modal-cancel">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Post -->
+    <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 mx-auto" id="staticBackdropLabel">
+                        <div class="note">  
+                            <h1 id="ed"> Enter Details </h1>  
+                        </div>  
+                    </h1>
+                </div>
+                <div class="modal-body" id="update-modal">
+                    <div class="container register-form">  
+                        <div class="form-content">  
+                            <div class="form-floating mb-3">
+                                <input type="name" class="form-control" id="fn2"  placeholder="First Name">
+                                <label  class="mx-3">First Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="name" class="form-control"  id="mn2" placeholder="Middle Name">
+                                <label  class="mx-3">Middle Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="name" class="form-control"  id="ln2" placeholder="Last Name">
+                                <label  class="mx-3">Last Name</label>
+                            </div>
+                                
+                            <div class="form-floating mb-3">  
+                                <input type="number" class="form-control px-3" placeholder="Nurse Id *" value="" id="id2"/>  
+                                <label  class="mx-3">Nurse Id</label>
+                            </div>  
+                            <div class="form-floating mb-3">  
+                                <input type="date" class="form-control" placeholder="Date Of Joining " value="" id="date2"/>  
+                                <label  class="mx-3">Date of Joining</label>
+                            </div>  
+                    
+                            <div class="form-floating mb-3">  
+                                <input type="number" class="form-control" placeholder="Salary " value="" id="salary2"/>
+                                <label  class="mx-3">Salary</label>  
+                            </div>  
+
+                            <div class="form-floating mb-3">  
+                                <input type="email" class="form-control" placeholder=" Enter Email Address" id="email2">  
+                                <label  class="mx-3">Email Address</label>
+                            </div>  
+                            <div class="form-floating mb-3">  
+                                <input type="text" class="form-control" placeholder=" Address" id="address2">  
+                                <label  class="mx-3">Address</label>
+                            </div> 
+                        </div>                              
+                    </div>                 
+                </div>  
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="modal-cancel">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="modal-save1">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+    <script src="js/nurse.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+   
+
+</body>
+</html>

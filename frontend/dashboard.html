@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Building dashboard with gird and flex</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        color: rgb(95, 91, 91); 
+        box-sizing: border-box;
+        font-family: monospace;
+        font-size: 15px;
+        /* background: url("data:image/jpeg;base64,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") no-repeat center center fixed; */
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr 50px;
+
+        grid-template-areas:
+          'header'
+          'main'
+          'footer';
+        height: 100vh;
+      }
+
+      .header {
+        grid-area: header;
+        background-color: rgb(226, 219, 219);
+      }
+
+      .aside {
+        grid-area: aside;
+        background-color: darkblue;
+      }
+
+      .main {
+        grid-area: main;
+         background-color: rgb(244, 247, 249);
+        /* background: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgNCAcICA0HBwgHBwoHBwcHCA8ICQcKFREWFhURHxMYHSggGCYlJxUfITEhJSkrLi4uFx8zODMsNygtLisBCgoKDQ0NDg0NDisZFRkrKysrLTcrNysrKysrNysrKysrKysrKysrLSsrKysrKysrKysrKysrKysrKysrKysrK//AABEIALQBGAMBIgACEQEDEQH/xAAaAAEBAQEBAQEAAAAAAAAAAAACAQADBQYE/8QAGBABAQEBAQAAAAAAAAAAAAAAAAEREgL/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwD2uV5dp5blRznlZ5dOV5ECeV5dOVnkVz5Xl05bkHPlsdcbkHLGx05bkHPluXTGwHPlLHXEsByxL5db5TAcuW5dcTAcsTl1xMBysG+XblLAcbBsdrBsQcL5G+XewL5Bx5Sx15SwHHkb5dsGwHG+Qvl3vkL5B+e+VdL5YHvzyvLpyvKjlyvLry3IOfKzyfKyAHLcumNyAY2HjYDnjY64nIOeNjpiWAGJh41gOfKY64mA5WJY64lgOeJjpiYDnYNjrYmIONg2O1g2A42JfLrYNgOPKWO1g2A43yl8utiWA4WDfLtYNgOF8s6XywPoMbl0xsUDG5PFwHPFw8bADFwsbADGw8bADGw8bADEsdMbAcsbHSxMAMSw8bAc8THTEsBzsSx0xLAcrEsdMSwHOwbHWwbEHKwcdbEsBysGx1sSwHLBsdbBsBysGx1sGxFcbGOxhH0GNh42NA42HjYAY2HjYAY2HjYAY2HjYAY2HiYA4mHjYAYlh4mAGJh2JgBjYdiYAWDY6YmA52JY6YOA52DY6WJiDnYljpiWA5WDY62DYDngWOuDYK52DY6WDYiOVinYgr6DGw8bGkDFwsbAHGwsbAHEw8TAHGwsbADGwsYBxsJKA4mHiYAWJh4lgBjYWJgA2FiYgNg4eJYAWDY6YlgOeJYeDYAWDY6WJYDng2Olg2A52DY6WDYiudjFYoPoMbFxWkHEw8bBAxsLGwUcTCxgHGLEwBxMPEAWwsTAHGxWwBxLDxMAMSw7EsAEwsRAcSw8TACxLDo2AGJYdGwAqWHYmA52DY6WDYDnYlh2DYihYhWMI+gbFxWhGxcbAHGwsbADGLEAWwmwAxixMAWpIA4h4gDiYTYAYlh4lgBiWHiWAGITVAMSmgOeJh2JQDBsNLAc7EsOxMBzwbHSwbEAsYrGB72MuNjSIyqCITAOJh4mCihY2AKEgC2EgDiYWMA4hY2ADYSAOJhYmIBiGmAFiWHg0Bo07EoBYNNKAWDYeIAWDY6WDYgFiFYyq97EwsbFZFVYEZWBEwmAUwmwUcTCxAHEw0AcQsSwBYkQFCTAFsVlAsTDRALEp0bABLDsGgNg2HUsAKlhWIAWIdg2AFYrGB7uMSYqDjYWICMrAjKwJiE2ADFiAOJhpQBixBRxCxAFlxkBQkAUwkwBSklAKmGNgCJ2JQCwbDSwATCsQAqtWB72NisqC2EgCxICMqAyKwIisAsSAKElFFCRBEpIAoSAKUqgChIA4lKpQCpSqANg0xoDYFdKNRQZawj3mrM0jIzAyKwIjMDMzAjMwIzMCVGZFRFYQa1ZhURmBERgaozAlSswDUrMCUazAg1mRRrMwj//2Q==") no-repeat center center fixed; */
+        /* background-size: cover; */
+      }
+      .footer {
+        grid-area: footer;
+        background-color: whitesmoke;
+      }
+
+      /* flexing header and footer*/
+      .header,
+      .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: darkblue;
+        padding: 0 15px;
+      }
+
+      /* flexing aside */
+      .aside {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 240px;
+        position: fixed;
+        overflow-y: auto;
+        z-index: 2;
+        transform: translateX(-245px);
+      }
+
+      .aside.active {
+        transform: translateX(0);
+      }
+
+      .aside_list {
+        padding: 0;
+        margin-top: 85px;
+        list-style-type: none;
+      }
+
+      .aside_list-item {
+        padding: 20px 20px 20px 40px;
+        color: #ddd;
+      }
+
+      .aside_list-item:hover {
+        background-color: royalblue;
+        cursor: pointer;
+      }
+
+      /* Layout for main content overview  and its cards*/
+      .main_overview {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        border-bottom: 1px solid lightgreen;
+      }
+      .overview_card {
+        flex-basis: 250px;
+        flex-grow: 1;
+        margin: 10px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px;
+         background-color: rgb(133, 210, 167); 
+         opacity: 50%;
+        height: 100px;
+        border: 1px solid darkblue;
+        border-radius: 10px;
+        color: rgb(49, 25, 204);
+        font-weight: 500;
+        font-size: larger;
+        text-align: center; 
+      
+      }
+
+      /* Layout for main-cards section // below main_overview */
+      /* .main_cards {
+        margin: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 200px 200px;
+        grid-template-areas:
+          'card1'
+          'card2'
+          'card3';
+        grid-gap: 10px;
+      }
+      .card {
+        padding: 100px;
+        border: 1px solid tomato;
+        border-radius: 4px;
+        color: tomato;
+      }
+
+      .card:nth-child(2) {
+        grid-area: card1;
+      }
+      .card:nth-child(2) {
+        grid-area: card2;
+      }
+      .card:nth-child(2) {
+        grid-area: card3;
+      } */
+
+      /* responsive layout */
+      @media only screen and (min-width: 750px) {
+        .grid-container {
+          display: grid;
+          grid-template-columns: 240px 1fr;
+          grid-template-rows: 50px 1fr 50px;
+          grid-template-areas:
+            'aside header'
+            'aside main'
+            'aside footer';
+          height: 100vh;
+        }
+
+        .aside {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          transform: translateX(0);
+        }
+
+        .main_cards {
+          margin: 10px;
+          display: grid;
+          grid-template-columns: 2fr 1fr;
+          grid-template-rows: 200px 300px;
+          grid-template-areas:
+            'card1 card2'
+            'card1 card3';
+          grid-gap: 10px;
+        }
+      }
+
+      .menu-icon {
+        position: fixed;
+        display: flex;
+        top: 2px;
+        left: 8px;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        cursor: pointer;
+        padding: 12px;
+        color: black;
+      }
+
+      .header_search {
+        margin-left: 24px;
+      }
+
+      .aside_close-icon {
+        position: absolute;
+        visibility: visible;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+      }
+      @media only screen and (min-width: 750px) {
+        .aside_close-icon {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="menu-icon">
+        <strong> &#9776;</strong>
+      </div>
+      <header class="header">
+        <div class="header_search">HOSPITAL MANAGEMENT</div>
+        <div class="header_avatar">Logout</div>
+      </header>
+      <aside class="aside">
+        <div class="aside_close-icon">
+          <strong>&times;</strong>
+        </div>
+        <ul class="aside_list">
+          <li class="aside_list-item">About</li>
+          <li class="aside_list-item">Address</li>
+          <li class="aside_list-item">Contact Us</li>
+          <!-- s -->
+        </ul>
+      </aside>
+      <main class="main">
+        <div class="main_overview">
+          <div class="overview_card">
+            <!-- <div class="overview_card-info">Overview</div> -->
+            <div class="overview_card-icon"><b> Staff</b></div>
+          </div>
+          <div class="overview_card">
+            <!-- <div class="overview_card-info">Overview</div> -->
+            <a href="nurse.html"><div class="overview_card-icon"><b>Nurses</b></div></a>
+          </div>
+        </div>
+
+        <!-- <div class="main_cards">
+          <div class="card">Surgeons</div>
+          <div class="card">Physicians</div>
+          <div class="card">Patients</div>
+        </div> -->
+        <div class="main_overview">
+            <div class="overview_card">
+                <!-- <div class="overview_card-info">Overview</div> -->
+                <div class="overview_card-icon"><b>Physicians</b></div>
+              </div>
+              <div class="overview_card">
+                <!-- <div class="overview_card-info">Overview</div> -->
+                <div class="overview_card-icon"><b>Surgeons</b></div>
+              </div>
+          </div>
+          <div class="main_overview">
+            <div class="overview_card">
+                <!-- <div class="overview_card-info">Overview</div> -->
+                <div class="overview_card-icon"><b>Patients </b></div>
+              </div>
+              </div>
+      </main>
+      <footer class="footer">
+        <div class="footer_copyright">&copy;2020</div>
+        <div class="footer_byline">Made with &hearts;</div>
+      </footer>
+    </div>
+    <script type="text/javascript">
+      const menuIcon = document.querySelector('.menu-icon');
+      const aside = document.querySelector('.aside');
+      const asideClose = document.querySelector('.aside_close-icon');
+
+      function toggle(el, className) {
+        if (el.classList.contains(className)) {
+          el.classList.remove(className);
+        } else {
+          el.classList.add(className);
+        }
+      }
+
+      menuIcon.addEventListener('click', function() {
+        toggle(aside, 'active');
+      });
+
+      asideClose.addEventListener('click', function() {
+        toggle(aside, 'active');
+      });
+    </script>
+  </body>
+</html>
